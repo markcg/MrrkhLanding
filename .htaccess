@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteBase /default_landing/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/index.html$
+RewriteCond %{REQUEST_URI} !\.(gif|jpe?g|png|css|js)$
+RewriteRule .* /default_landing/index.html [L,R=302]
